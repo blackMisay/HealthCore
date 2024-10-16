@@ -17,6 +17,10 @@
 
 **Target Audience:** Private and Public Healthcare Practioner/Professional/Organization
 
+## Code of Conduct
+
+No reference on any code of conduct or community guidelines yet.
+
 ## Installation
 
 Prerequisites:
@@ -24,12 +28,7 @@ Prerequisites:
 - .NET 8
 - MySqlConnector
 
-## Code of Conduct
-
-No reference on any code of conduct or community guidelines yet.
-
-
-## Installation
+Running the Application
 
 - Clone the [repository](https://github.com/blackMisay/HealthCore.git).
 - Open the solution in [Visual Studio](https://visualstudio.microsoft.com/downloads/).
