@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            btnlogin = new Button();
+            btnLogin = new Button();
             cboxremem = new CheckBox();
             lblusername = new Label();
             txtusername = new TextBox();
@@ -41,28 +41,31 @@
             ((System.ComponentModel.ISupportInitialize)picbox_logo).BeginInit();
             SuspendLayout();
             // 
-            // btnlogin
+            // btnLogin
             // 
-            btnlogin.BackColor = Color.MediumOrchid;
-            btnlogin.FlatAppearance.BorderSize = 0;
-            btnlogin.FlatStyle = FlatStyle.Flat;
-            btnlogin.Font = new Font("Segoe UI", 12F);
-            btnlogin.ForeColor = Color.White;
-            btnlogin.Location = new Point(64, 362);
-            btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(247, 37);
-            btnlogin.TabIndex = 0;
-            btnlogin.Text = "Login";
-            btnlogin.UseVisualStyleBackColor = false;
+            btnLogin.BackColor = Color.MediumOrchid;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI", 12F);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(73, 483);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(282, 49);
+            btnLogin.TabIndex = 0;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // cboxremem
             // 
             cboxremem.AutoSize = true;
             cboxremem.Font = new Font("Nirmala UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboxremem.ForeColor = Color.Gray;
-            cboxremem.Location = new Point(64, 318);
+            cboxremem.Location = new Point(73, 424);
+            cboxremem.Margin = new Padding(3, 4, 3, 4);
             cboxremem.Name = "cboxremem";
-            cboxremem.Size = new Size(117, 23);
+            cboxremem.Size = new Size(144, 27);
             cboxremem.TabIndex = 1;
             cboxremem.Text = "Remember me";
             cboxremem.UseVisualStyleBackColor = true;
@@ -72,18 +75,19 @@
             lblusername.AutoSize = true;
             lblusername.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblusername.ForeColor = Color.Gray;
-            lblusername.Location = new Point(64, 189);
+            lblusername.Location = new Point(73, 252);
             lblusername.Name = "lblusername";
-            lblusername.Size = new Size(81, 21);
+            lblusername.Size = new Size(99, 28);
             lblusername.TabIndex = 2;
             lblusername.Text = "Username";
             // 
             // txtusername
             // 
             txtusername.Font = new Font("Segoe UI", 12F);
-            txtusername.Location = new Point(64, 213);
+            txtusername.Location = new Point(73, 284);
+            txtusername.Margin = new Padding(3, 4, 3, 4);
             txtusername.Name = "txtusername";
-            txtusername.Size = new Size(247, 29);
+            txtusername.Size = new Size(282, 34);
             txtusername.TabIndex = 3;
             // 
             // lbl_logacc
@@ -91,19 +95,20 @@
             lbl_logacc.AutoSize = true;
             lbl_logacc.Font = new Font("Nirmala UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl_logacc.ForeColor = Color.Gray;
-            lbl_logacc.Location = new Point(95, 141);
+            lbl_logacc.Location = new Point(109, 188);
             lbl_logacc.Name = "lbl_logacc";
-            lbl_logacc.Size = new Size(179, 25);
+            lbl_logacc.Size = new Size(226, 32);
             lbl_logacc.TabIndex = 4;
             lbl_logacc.Text = "Log in your account";
             // 
             // txtpassword
             // 
             txtpassword.Font = new Font("Segoe UI", 12F);
-            txtpassword.Location = new Point(64, 283);
+            txtpassword.Location = new Point(73, 377);
+            txtpassword.Margin = new Padding(3, 4, 3, 4);
             txtpassword.Name = "txtpassword";
             txtpassword.PasswordChar = '•';
-            txtpassword.Size = new Size(247, 29);
+            txtpassword.Size = new Size(282, 34);
             txtpassword.TabIndex = 6;
             // 
             // lblpass
@@ -111,9 +116,9 @@
             lblpass.AutoSize = true;
             lblpass.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblpass.ForeColor = Color.Gray;
-            lblpass.Location = new Point(61, 259);
+            lblpass.Location = new Point(70, 345);
             lblpass.Name = "lblpass";
-            lblpass.Size = new Size(76, 21);
+            lblpass.Size = new Size(93, 28);
             lblpass.TabIndex = 5;
             lblpass.Text = "Password";
             // 
@@ -121,9 +126,10 @@
             // 
             picbox_logo.BackgroundImageLayout = ImageLayout.Center;
             picbox_logo.Image = (Image)resources.GetObject("picbox_logo.Image");
-            picbox_logo.Location = new Point(128, 31);
+            picbox_logo.Location = new Point(146, 41);
+            picbox_logo.Margin = new Padding(3, 4, 3, 4);
             picbox_logo.Name = "picbox_logo";
-            picbox_logo.Size = new Size(112, 107);
+            picbox_logo.Size = new Size(128, 143);
             picbox_logo.SizeMode = PictureBoxSizeMode.StretchImage;
             picbox_logo.TabIndex = 8;
             picbox_logo.TabStop = false;
@@ -132,19 +138,19 @@
             // 
             linkpass.AutoSize = true;
             linkpass.LinkColor = Color.MediumOrchid;
-            linkpass.Location = new Point(211, 322);
+            linkpass.Location = new Point(241, 429);
             linkpass.Name = "linkpass";
-            linkpass.Size = new Size(100, 15);
+            linkpass.Size = new Size(125, 20);
             linkpass.TabIndex = 9;
             linkpass.TabStop = true;
             linkpass.Text = "Forgot Password?";
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(369, 440);
+            ClientSize = new Size(422, 587);
             Controls.Add(linkpass);
             Controls.Add(picbox_logo);
             Controls.Add(txtpassword);
@@ -153,8 +159,9 @@
             Controls.Add(txtusername);
             Controls.Add(lblusername);
             Controls.Add(cboxremem);
-            Controls.Add(btnlogin);
+            Controls.Add(btnLogin);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -165,7 +172,7 @@
 
         #endregion
 
-        private Button btnlogin;
+        private Button btnLogin;
         private CheckBox cboxremem;
         private Label lblusername;
         private TextBox txtusername;

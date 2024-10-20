@@ -4,7 +4,10 @@
     <Compile Update="Modules\Authentication\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Modules\frmMain.cs">
+    <Compile Update="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Modules\Dashboard\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
