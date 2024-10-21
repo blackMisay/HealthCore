@@ -29,32 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientEntry));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label2 = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label3 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label7 = new Label();
-            label8 = new Label();
-            textBox4 = new TextBox();
-            label9 = new Label();
-            textBox5 = new TextBox();
-            label10 = new Label();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            label11 = new Label();
-            textBox8 = new TextBox();
-            label12 = new Label();
             dgvQuestion = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -62,8 +43,29 @@
             Column4 = new DataGridViewTextBoxColumn();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label20 = new Label();
+            button2 = new Button();
+            button1 = new Button();
             label19 = new Label();
             label1 = new Label();
+            textBox8 = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox7 = new TextBox();
+            textBox3 = new TextBox();
+            label11 = new Label();
+            label2 = new Label();
+            textBox6 = new TextBox();
+            label10 = new Label();
+            label4 = new Label();
+            label9 = new Label();
+            comboBox1 = new ComboBox();
+            textBox5 = new TextBox();
+            label5 = new Label();
+            textBox4 = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            label8 = new Label();
+            label7 = new Label();
             tabPage2 = new TabPage();
             pictureBox2 = new PictureBox();
             label6 = new Label();
@@ -138,198 +140,16 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(93, 143);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(197, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(521, 143);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(197, 27);
-            textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(307, 143);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(197, 27);
-            textBox3.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F);
-            label2.ForeColor = Color.FromArgb(72, 85, 99);
-            label2.Location = new Point(521, 124);
-            label2.Name = "label2";
-            label2.Size = new Size(63, 17);
-            label2.TabIndex = 4;
-            label2.Text = "Lastname";
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F);
             label3.ForeColor = Color.FromArgb(72, 85, 99);
-            label3.Location = new Point(93, 124);
+            label3.Location = new Point(107, 98);
             label3.Name = "label3";
             label3.Size = new Size(64, 17);
             label3.TabIndex = 5;
             label3.Text = "Firstname";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9.75F);
-            label4.ForeColor = Color.FromArgb(72, 85, 99);
-            label4.Location = new Point(307, 124);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 17);
-            label4.TabIndex = 6;
-            label4.Text = "Middlename";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Single", "Married", "Widowed", "Legally Separated" });
-            comboBox1.Location = new Point(521, 214);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(197, 25);
-            comboBox1.TabIndex = 7;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9.75F);
-            label5.ForeColor = Color.FromArgb(72, 85, 99);
-            label5.Location = new Point(521, 194);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 17);
-            label5.TabIndex = 8;
-            label5.Text = "Civil Status";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(93, 213);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(197, 23);
-            dateTimePicker1.TabIndex = 10;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F);
-            label7.ForeColor = Color.FromArgb(72, 85, 99);
-            label7.Location = new Point(93, 194);
-            label7.Name = "label7";
-            label7.Size = new Size(83, 17);
-            label7.TabIndex = 11;
-            label7.Text = "Date Of Birth";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9.75F);
-            label8.ForeColor = Color.FromArgb(72, 85, 99);
-            label8.Location = new Point(307, 194);
-            label8.Name = "label8";
-            label8.Size = new Size(31, 17);
-            label8.TabIndex = 12;
-            label8.Text = "Age";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(307, 213);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(197, 27);
-            textBox4.TabIndex = 13;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F);
-            label9.ForeColor = Color.FromArgb(72, 85, 99);
-            label9.Location = new Point(93, 269);
-            label9.Name = "label9";
-            label9.Size = new Size(101, 17);
-            label9.TabIndex = 15;
-            label9.Text = "Mobile Number";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(93, 288);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(197, 27);
-            textBox5.TabIndex = 14;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9.75F);
-            label10.ForeColor = Color.FromArgb(72, 85, 99);
-            label10.Location = new Point(92, 332);
-            label10.Name = "label10";
-            label10.Size = new Size(95, 17);
-            label10.TabIndex = 16;
-            label10.Text = "Home Address";
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(90, 351);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(414, 88);
-            textBox6.TabIndex = 17;
-            // 
-            // textBox7
-            // 
-            textBox7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(307, 288);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(197, 27);
-            textBox7.TabIndex = 19;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F);
-            label11.ForeColor = Color.FromArgb(72, 85, 99);
-            label11.Location = new Point(309, 269);
-            label11.Name = "label11";
-            label11.Size = new Size(100, 17);
-            label11.TabIndex = 18;
-            label11.Text = "Guardian Name";
-            // 
-            // textBox8
-            // 
-            textBox8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox8.Location = new Point(521, 288);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(197, 27);
-            textBox8.TabIndex = 21;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9.75F);
-            label12.ForeColor = Color.FromArgb(72, 85, 99);
-            label12.Location = new Point(523, 269);
-            label12.Name = "label12";
-            label12.Size = new Size(131, 17);
-            label12.TabIndex = 20;
-            label12.Text = "Guardian Occupation";
             // 
             // dgvQuestion
             // 
@@ -392,11 +212,13 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.WhiteSmoke;
+            tabPage1.Controls.Add(label20);
+            tabPage1.Controls.Add(button2);
+            tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(label19);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(textBox8);
             tabPage1.Controls.Add(textBox1);
-            tabPage1.Controls.Add(label12);
             tabPage1.Controls.Add(textBox2);
             tabPage1.Controls.Add(textBox7);
             tabPage1.Controls.Add(textBox3);
@@ -421,14 +243,49 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Personal Information";
             // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 9.75F);
+            label20.ForeColor = Color.FromArgb(72, 85, 99);
+            label20.Location = new Point(535, 246);
+            label20.Name = "label20";
+            label20.Size = new Size(131, 17);
+            label20.TabIndex = 26;
+            label20.Text = "Guardian Occupation";
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Green;
+            button2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(688, 443);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 35);
+            button2.TabIndex = 25;
+            button2.Text = "Save";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(72, 85, 99);
+            button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(596, 443);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 35);
+            button1.TabIndex = 24;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.DarkRed;
-            label19.Location = new Point(249, 64);
+            label19.Location = new Point(32, 454);
             label19.Name = "label19";
-            label19.Size = new Size(335, 15);
+            label19.Size = new Size(331, 15);
             label19.TabIndex = 23;
             label19.Text = "Patients are required to register their information on this form.";
             // 
@@ -437,11 +294,182 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(72, 85, 99);
-            label1.Location = new Point(261, 14);
+            label1.Location = new Point(216, 22);
             label1.Name = "label1";
-            label1.Size = new Size(305, 45);
+            label1.Size = new Size(389, 45);
             label1.TabIndex = 22;
-            label1.Text = "Patient Information";
+            label1.Text = "Patient Information Form";
+            // 
+            // textBox8
+            // 
+            textBox8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox8.Location = new Point(535, 266);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(197, 27);
+            textBox8.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(107, 118);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(197, 27);
+            textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(535, 118);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(197, 27);
+            textBox2.TabIndex = 2;
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox7.Location = new Point(321, 266);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(197, 27);
+            textBox7.TabIndex = 19;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(323, 118);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(197, 27);
+            textBox3.TabIndex = 3;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9.75F);
+            label11.ForeColor = Color.FromArgb(72, 85, 99);
+            label11.Location = new Point(323, 247);
+            label11.Name = "label11";
+            label11.Size = new Size(100, 17);
+            label11.TabIndex = 18;
+            label11.Text = "Guardian Name";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F);
+            label2.ForeColor = Color.FromArgb(72, 85, 99);
+            label2.Location = new Point(535, 98);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 17);
+            label2.TabIndex = 4;
+            label2.Text = "Lastname";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox6.Location = new Point(104, 329);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(414, 88);
+            textBox6.TabIndex = 17;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9.75F);
+            label10.ForeColor = Color.FromArgb(72, 85, 99);
+            label10.Location = new Point(106, 310);
+            label10.Name = "label10";
+            label10.Size = new Size(95, 17);
+            label10.TabIndex = 16;
+            label10.Text = "Home Address";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F);
+            label4.ForeColor = Color.FromArgb(72, 85, 99);
+            label4.Location = new Point(321, 98);
+            label4.Name = "label4";
+            label4.Size = new Size(81, 17);
+            label4.TabIndex = 6;
+            label4.Text = "Middlename";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9.75F);
+            label9.ForeColor = Color.FromArgb(72, 85, 99);
+            label9.Location = new Point(107, 247);
+            label9.Name = "label9";
+            label9.Size = new Size(101, 17);
+            label9.TabIndex = 15;
+            label9.Text = "Mobile Number";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Single", "Married", "Widowed", "Legally Separated" });
+            comboBox1.Location = new Point(535, 192);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(197, 25);
+            comboBox1.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(107, 266);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(197, 27);
+            textBox5.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F);
+            label5.ForeColor = Color.FromArgb(72, 85, 99);
+            label5.Location = new Point(535, 172);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 17);
+            label5.TabIndex = 8;
+            label5.Text = "Civil Status";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(321, 191);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(197, 27);
+            textBox4.TabIndex = 13;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(107, 191);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(197, 23);
+            dateTimePicker1.TabIndex = 10;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F);
+            label8.ForeColor = Color.FromArgb(72, 85, 99);
+            label8.Location = new Point(321, 172);
+            label8.Name = "label8";
+            label8.Size = new Size(31, 17);
+            label8.TabIndex = 12;
+            label8.Text = "Age";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F);
+            label7.ForeColor = Color.FromArgb(72, 85, 99);
+            label7.Location = new Point(107, 172);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 17);
+            label7.TabIndex = 11;
+            label7.Text = "Date Of Birth";
             // 
             // tabPage2
             // 
@@ -516,36 +544,36 @@
             dataGridView6.AllowUserToAddRows = false;
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView6.BackgroundColor = Color.WhiteSmoke;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView6.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn21 });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridView6.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView6.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView6.Dock = DockStyle.Bottom;
             dataGridView6.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView6.Location = new Point(3, 107);
             dataGridView6.Name = "dataGridView6";
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView6.RowHeadersVisible = false;
             dataGridView6.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView6.Size = new Size(816, 394);
@@ -607,36 +635,36 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.WhiteSmoke;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Control;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn3, Column5, dataGridViewTextBoxColumn5 });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = SystemColors.Window;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView1.Location = new Point(3, 107);
             dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Control;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(816, 394);
@@ -989,26 +1017,7 @@
         }
 
         #endregion
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Label label2;
         private Label label3;
-        private Label label4;
-        private ComboBox comboBox1;
-        private Label label5;
-        private DateTimePicker dateTimePicker1;
-        private Label label7;
-        private Label label8;
-        private TextBox textBox4;
-        private Label label9;
-        private TextBox textBox5;
-        private Label label10;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private Label label11;
-        private TextBox textBox8;
-        private Label label12;
         private DataGridView dgvQuestion;
         private TabControl tabControl1;
         private TabPage tabPage1;
@@ -1039,7 +1048,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private Label label1;
         private DataGridView dataGridView6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1067,5 +1075,27 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private Label label19;
+        private Button button2;
+        private Button button1;
+        private Label label20;
+        private Label label1;
+        private TextBox textBox8;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox7;
+        private TextBox textBox3;
+        private Label label11;
+        private Label label2;
+        private TextBox textBox6;
+        private Label label10;
+        private Label label4;
+        private Label label9;
+        private ComboBox comboBox1;
+        private TextBox textBox5;
+        private Label label5;
+        private TextBox textBox4;
+        private DateTimePicker dateTimePicker1;
+        private Label label8;
+        private Label label7;
     }
 }
