@@ -1,22 +1,15 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-
+﻿using System.Data;
 using MySqlConnector;
-using System.Collections;
-using System.Linq;
-
 
 namespace Core.Data
 {
     internal class DataManager
     {
-        internal MySqlConnection connection;
-
+        private MySqlConnection connection = new();
+        private string errorMesage = "";
         private readonly string connectionString;
-        private readonly string qryReturnId = "SELECT LAST_INSERT_ID();";
+        private int lastInsertedId = 0;
 
-        public int LastInsertedId { get; private set; }
 
         /// <summary>
         /// This constructor initializes the DataManager object with default connection parameters.
@@ -34,7 +27,7 @@ namespace Core.Data
 
             this.connectionString = String.Format("server={0};database={1};userid={2};password={3};",
                 connectionParameters[0], connectionParameters[1], connectionParameters[2], connectionParameters[3]);
-            this.Connect();
+            this.Open();
         }
 
 
@@ -46,7 +39,7 @@ namespace Core.Data
         public DataManager(string connectionString)
         {
             this.connectionString = connectionString;
-            this.Connect();
+            this.Open();
         }
 
 
@@ -56,11 +49,11 @@ namespace Core.Data
         /// <param>None</param>
         /// <returns>None</returns>
         /// <exception cref="Exception">It catches any exceptions that occur during the execution of the query and rethrows them with a new exception containing the error message.</exception>
-        private protected void Connect()
+        private protected void Open()
         {
             try
             {
-                connection = new MySqlConnection(connectionString);
+                connection = new(connectionString);
                 if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
@@ -83,15 +76,14 @@ namespace Core.Data
         /// </summary>
         /// <param name="query">A string representing the SQL query to execute.</param>
         /// <param name="parameters">A dictionary containing parameter names and their corresponding values.</param>
-        /// <param name="returnId">A boolean representing if the query should return the last inserted id. Default value is false</param>>
+        /// <param name="isScalar">A boolean representing if the query should return the first column of the first row in the result set. Default value is false</param>>
         /// <returns>True if the query execution is successful, otherwise false.</returns>
         /// <exception cref="Exception">It catches any exceptions that occur during the execution of the query and rethrows them with a new exception containing the error message.</exception>
-        public bool ExecuteQuery(string query, Dictionary<string, string> parameters, bool returnId = false)
+        public bool Execute(string query, Dictionary<string, string> parameters, bool isScalar = false)
         {
             try
             {
-                if (returnId)
-                    String.Concat(query, this.qryReturnId);
+                query = isScalar ? String.Concat(query, "SELECT LAST_INSERT_ID();") : query;
 
                 using (MySqlCommand cmd = new MySqlCommand(query, this.connection))
                 {
@@ -100,23 +92,28 @@ namespace Core.Data
                         cmd.Parameters.AddWithValue(kvp.Key, kvp.Value);
                     }
 
-                    if (returnId)
-                        this.LastInsertedId = Convert.ToInt32(cmd.ExecuteScalar());
+                    if (isScalar)
+                    {
+                        this.lastInsertedId = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
                     else
+                    {
                         cmd.ExecuteNonQuery();
+                    }
 
                     return true;
                 }
             }
-            catch (MySqlException ex)
+            catch (MySqlException dbException)
             {
                 // Log or handle specific MySql errors here
-                throw new Exception($"Error executing query: {ex.Message}");
+                this.errorMesage = dbException.Message.ToString();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new Exception($"Unexpected error: {e.Message}");
+                this.errorMesage = ex.Message.ToString();
             }
+            return false;
         }
 
 
@@ -142,13 +139,12 @@ namespace Core.Data
         /// <returns>It returns the populated <see cref="System.Data.DataTable"/> containing the result of the query.</returns>
         /// <exception cref="Exception">It catches any exceptions that occur during the execution of the query and rethrows them with
         /// a new exception containing the error message.</exception>
-        public DataTable Load(string query, Dictionary<string, string> param)
+        public DataTable Load(string query, Dictionary<string, string>? param)
         {
+            DataTable dt = new();
             try
             {
-                this.Connect();
-                DataTable dt;
-                using (MySqlCommand cmd = new MySqlCommand(query, this.connection))
+                using (MySqlCommand cmd = new(query, this.connection))
                 {
                     if (param != null)
                     {
@@ -159,27 +155,53 @@ namespace Core.Data
                     }
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                     {
-                        dt = new DataTable();
                         da.Fill(dt);
-
-                        return dt;
                     }
                 }
+                return dt;
             }
-            catch (MySqlException ex)
+            catch (MySqlException dbException)
             {
                 // Log or handle specific MySql errors here
-                throw new Exception($"Error executing query: {ex.Message}");
+                this.errorMesage = dbException.Message.ToString();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new Exception($"Unexpected error: {e.Message}");
+                this.errorMesage = ex.Message.ToString();
+            }
+            return dt;
+        }
+
+
+        /// <summary>
+        /// Method for closing an open connection.
+        /// </summary>
+        public void Close()
+        {
+            if (this.connection.State == ConnectionState.Open)
+            {
+                connection.Close();
             }
         }
 
-        ~DataManager()
+
+        /// <summary>
+        /// Method for returning the last inserted id in the table.
+        /// </summary>
+        /// <returns>Returns the last inserted id as <see cref="System.Int32"/>.</returns>
+        public int GetLastInsertedId()
         {
-            this.connection.Close();
+            return this.lastInsertedId;
+        }
+
+
+        /// <summary>
+        /// Method for returning reported exceptions.
+        /// </summary>
+        /// <returns>Exception message</returns>
+        public string GetErrorMessage()
+        {
+            return this.errorMesage;
         }
     }
 }
